@@ -1,0 +1,386 @@
+/*
+022B3A dark blue
+1F7A8C tealish
+BFDBF7
+E1E5F2
+FFFFFF
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  line-height: 1em;
+}
+
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.App {
+  height: 100vh;
+  width: 100vw;
+  max-width: 1500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* 
+.fixed {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  z-index: 999;
+} */
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-bar {
+  display: flex;
+  color: #BFDBF7;
+  height: 40px;
+  width: 100%;
+  background-color: #022B3A;
+}
+
+.top-bar-number {
+  flex-grow: 1;
+  font-size: 1.2em;
+  padding: 0px 30px;
+  line-height: 40px;
+}
+
+.top-bar a {
+  color: lightsteelblue;
+  margin: auto 10px !important;
+}
+
+.nav-bar {
+  width: 100%;
+  height: 85px;
+  background-color: #E1E5F2;
+  z-index: 999;
+}
+
+
+
+/*   color: #022B3A; */
+
+.menu-name-container {
+  padding: 10px 50px;
+  display: inline-block;
+  text-align: center;
+  
+}
+
+.menu-title-first-line {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.75em;
+  color: lightslategray;
+  
+}
+.menu-title-second-line {
+  font-size: 2.7em;
+  font-weight: bold;
+  color: #022B3A;
+}
+
+.menu-list {
+  color: #022B3A;
+  font-size: 1.5em;
+  float: right;
+  margin-right: 100px;
+}
+
+nav ul li {
+  display: inline-block;
+  font-size: 1.25em;
+  line-height: 3em;
+  padding: 0px 10px;
+  cursor: pointer;
+}
+
+.active-link {
+  text-decoration: underline;
+}
+
+nav ul li:hover {
+  text-decoration: underline;
+}
+
+.menu-bars {
+  float: right;
+  line-height: 65px !important;
+  margin-right: 20px !important;
+  cursor: pointer;
+  display: none !important;
+}
+
+@media (min-width: 1312px) {
+  .menu-list {
+    margin-right: 300px;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav-bar {
+    height: 65px;
+  }
+
+  .menu-name-container {
+    padding-left: 20px;
+  }
+
+  .menu-title-first-line {
+    font-size: 1.25em;
+    
+  }
+  .menu-title-second-line {
+    font-size: 2em;
+  }
+
+  nav ul li {
+    font-size: 1em;
+  }
+
+  .menu-list {
+    margin-right: 50px;
+  }
+}
+
+
+
+
+@media (max-width: 750px) {
+
+  .menu-bars {
+    display: block !important;
+  }
+
+
+  @-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+  }
+
+  nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 105px;
+    text-align: center;
+    background-color:lightsteelblue;
+    display: block;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
+
+  }
+  
+  nav ul li {
+    display: block;
+  }
+
+  nav a {
+    color: #022B3A;
+  }
+
+  .hide-menu {
+    display: none !important;
+  }
+}
+
+.home-page-content {
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #E1E5F2;
+}
+
+/* .main-content {
+  max-width: 1400px;
+  margin: auto;
+  background-color: rgb(202, 210, 218);
+  overflow-y: auto;
+} */
+
+.carousel-container {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+
+
+.handshake-image {
+  width: 100%;
+  object-position: 0px -200px;
+  object-fit: contain;
+}
+
+@-webkit-keyframes flyInLeft {
+  from { left: -100% }
+    to { left: 25 }
+}
+@keyframes flyInLeft {
+  from { left: -100% }
+    to { left: 25 }
+}
+
+@-webkit-keyframes flyInRight {
+  from { left: 100% }
+    to { left: 25 }
+}
+@keyframes flyInRight {
+  from { left: 100% }
+    to { left: 25 }
+}
+
+.info-bubble {
+  position: absolute;
+  font-family: PTSansRegular, Arial, Helvetica, sans-serif;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: left;
+
+}
+
+.info-bubble-top {
+  -webkit-animation: flyInLeft 2s;
+  animation: flyInLeft 2s;
+  font-size: 2em;
+  color: white;
+  position: absolute;
+  top: 20px;
+  left: 120px; 
+  background-color: rgba(2, 43, 58, 0.8);
+  border-radius: 10px;
+}
+
+.info-bubble-bottom {
+  -webkit-animation: flyInRight 2s;
+  animation: flyInRight 2s;
+  left: 25px;
+  top: 75px;
+  width: 350px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+
+@media (max-width: 992px) {
+  .handshake-image {
+    object-position: 0px -80px;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 750px) {
+  .handshake-image {
+    height: 100%;
+    width: 100%;
+    object-position: 50% 50%;
+    object-fit: cover;
+  }
+}
+
+.under-main-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  background-color: #022B3A;
+  color: white;
+  height: 60px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  padding-left: 30px;
+}
+
+.main-content-grid {
+  width: 100%;
+  display: flex;
+  /* justify-content: space-around; */
+  background-color: #E1E5F2;
+}
+
+
+.content-grid-panel {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  padding: 10px;
+  color: #022B3A;
+  font-size: 1.2em;
+  /* width: 33vw; */
+  flex-shrink: 1;
+  width: 100%;
+  line-height: 1.2em;
+}
+
+@media (max-width: 750px) {
+  .main-content-grid {
+    flex-direction: column;
+  }
+}
+
+.content-panel-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  /* font-weight: bold; */
+}
+.content-grid-panel ul {
+  padding: 15px;
+}
+.content-grid-panel ul li {
+  list-style-type: circle;
+  line-height: 1.2em;
+}
+
+.contact-form {
+  max-width: 400px;
+  padding: 15px;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.contact-form input {
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.contact-form textarea {
+  width: 100%;
+}
+
+.contact-form button {
+  padding: 10px;
+  background-color: #022B3A;
+  border: 1px solid lightslategray;
+  border-radius: 10px;
+  color: #E1E5F2;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+
+/*
+022B3A dark blue
+1F7A8C telish
+BFDBF7 lightblue
+E1E5F2 lighter blue
+FFFFFF
+*/
