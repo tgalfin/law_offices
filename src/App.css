@@ -17,6 +17,10 @@ FFFFFF
   line-height: 1em;
 }
 
+h1 {
+  margin: 0px;
+}
+
 body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
@@ -27,8 +31,9 @@ body {
   max-width: 1500px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin: auto;
 }
+
 /* 
 .fixed {
   display: flex;
@@ -104,6 +109,8 @@ body {
 }
 
 nav ul li {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: bold;
   display: inline-block;
   font-size: 1.25em;
   line-height: 3em;
@@ -208,6 +215,7 @@ nav ul li:hover {
   height: 100vh;
   overflow-y: auto;
   background-color: #E1E5F2;
+  padding-bottom: 120px !important;
 }
 
 /* .main-content {
@@ -226,6 +234,11 @@ nav ul li:hover {
 }
 
 
+.carousel-image {
+  height: 100%;
+  object-fit: contain !important;
+  object-position: 100% 0px;
+}
 
 .handshake-image {
   width: 100%;
@@ -233,22 +246,20 @@ nav ul li:hover {
   object-fit: contain;
 }
 
+
 @-webkit-keyframes flyInLeft {
   from { left: -100% }
-    to { left: 25 }
+
 }
 @keyframes flyInLeft {
   from { left: -100% }
-    to { left: 25 }
 }
 
 @-webkit-keyframes flyInRight {
   from { left: 100% }
-    to { left: 25 }
 }
 @keyframes flyInRight {
   from { left: 100% }
-    to { left: 25 }
 }
 
 .info-bubble {
@@ -257,10 +268,10 @@ nav ul li:hover {
   padding: 10px;
   border-radius: 10px;
   text-align: left;
-
 }
 
-.info-bubble-top {
+
+#main-bubble-0-top {
   -webkit-animation: flyInLeft 2s;
   animation: flyInLeft 2s;
   font-size: 2em;
@@ -269,16 +280,53 @@ nav ul li:hover {
   top: 20px;
   left: 120px; 
   background-color: rgba(2, 43, 58, 0.8);
-  border-radius: 10px;
 }
 
-.info-bubble-bottom {
+#main-bubble-0-bottom {
   -webkit-animation: flyInRight 2s;
   animation: flyInRight 2s;
+  position: absolute;
   left: 25px;
   top: 75px;
   width: 350px;
   background-color: rgba(255, 255, 255, 0.9);
+}
+
+#main-bubble-1-top {
+  /* -webkit-animation: flyInRight 2s;
+  animation: flyInLeft 2s;
+  font-size: 2em;
+  color: rgba(2, 43, 58, 0.8);
+  position: absolute;
+  top: 20px; 
+  left: 250px; 
+  */
+  -webkit-animation: flyInLeft 2s;
+  animation: flyInLeft 2s;
+  font-size: 2em;
+  position: absolute;
+  top: 20px;
+  left: 120px; 
+  color: rgba(2, 43, 58, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+}
+
+#main-bubble-1-bottom {
+  /* -webkit-animation: flyInLeft 2s;
+  animation: flyInRight 2s;
+  left: 100px;
+  top: 75px;
+  width: 350px; */
+
+  -webkit-animation: flyInRight 2s;
+  animation: flyInRight 2s;
+  position: absolute;
+  left: 25px;
+  top: 75px;
+  width: 350px;
+  background-color: rgba(2, 43, 58, 0.8);
+  color: white;
 }
 
 
@@ -290,11 +338,13 @@ nav ul li:hover {
 }
 
 @media (max-width: 750px) {
+  .carousel-image {
+    object-position: -200px 0px;
+  }
   .handshake-image {
-    height: 100%;
-    width: 100%;
-    object-position: 50% 50%;
-    object-fit: cover;
+    height: 300px;
+    object-position: 0px 0px;
+    object-fit: cover !important;
   }
 }
 
@@ -337,14 +387,15 @@ nav ul li:hover {
 }
 
 .content-panel-title {
+  font-family: 'Barlow Semi Condensed', sans-serif;
   font-size: 1.5em;
   font-weight: bold;
   /* font-weight: bold; */
 }
 .content-grid-panel ul {
-  padding: 15px;
+  padding: 0px 15px 15px 15px;
 }
-.content-grid-panel ul li {
+.bullet-list li {
   list-style-type: circle;
   line-height: 1.2em;
 }
@@ -357,12 +408,14 @@ nav ul li:hover {
 }
 
 .contact-form input {
+  border-radius: 5px;
   width: 100%;
   margin-bottom: 10px;
   margin-top: 5px;
 }
 
 .contact-form textarea {
+  border-radius: 5px;
   width: 100%;
 }
 
@@ -375,6 +428,21 @@ nav ul li:hover {
   font-weight: bold;
   margin-top: 10px;
 }
+
+.bottom-nav {
+  padding-left: 0 !important;
+}
+
+.bottom-nav li {
+  line-height: 1.4em;
+  font-size: 1em;
+} 
+
+.bottom-nav li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 
 
 /*

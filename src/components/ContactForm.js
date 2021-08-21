@@ -14,18 +14,18 @@ const ContactForm = (props) => {
   };
 
   return (
-    <div style={{marginTop: 10}}>
+    <div style={{marginTop: 20}}>
       <form onSubmit={handleSubmit} className='contact-form'>
-        <label for='name'>Name: </label>
+        <label htmlFor='name'>Name: </label>
         <input type='text' name='name' value={values.name} onChange={handleChange} required />
         <br />
-        <label for='email'>Email: </label>
+        <label htmlFor='email'>Email: </label>
         <input type='text' name='email' value={values.email} onChange={handleChange} required />
         <br />
-        <label for='phone'>Phone: </label>
+        <label htmlFor='phone'>Phone: </label>
         <input type='text' name='phone' value={values.phone} onChange={handleChange} />
         <br />
-        <label for='phone'>Message: </label>
+        <label htmlFor='phone'>Message: </label>
         <br /><br />
         <textarea type='text' name='message' value={values.message} onChange={handleChange} required />
         <div className='flex-center'>
