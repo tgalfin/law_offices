@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import ContactForm from '../components/ContactForm'
+import BottomBar from '../components/BottomBar'
 import '../App.css'
 
 const Home = (props) => {
@@ -54,7 +55,7 @@ const Home = (props) => {
   };
 
   return (
-    <div className='home-page-content'>
+    <div className='home-page-content main-content'>
       <div className='carousel-container' onClick={handleCarouselClick}>
           {renderCarouselImage()}
         <div style={{ display: 'flex', position: 'absolute', top: '90%', left: '50%', }}>
@@ -66,7 +67,7 @@ const Home = (props) => {
         <span>Proudly serving clients <span style={{ color: '#BFDBF7', fontWeight: 'bold' }}><br />across Southern California</span></span> 
       </div>
 
-      <div className='main-content-grid'>
+      <div className='main-content-grid' >
         <div className='content-grid-panel'>
           <h1 className='content-panel-title'>Client first</h1>
             <br />
@@ -89,37 +90,10 @@ const Home = (props) => {
         </div>
         <div className='content-grid-panel'>
           <h1 className='content-panel-title'>Contact Us</h1>
-            <ContactForm />
+          <ContactForm />
         </div>
       </div>
-
-      <div className='main-content-grid' style={{ display: 'flex', backgroundColor: '#5B7AB2',   }}>
-        <div className='content-grid-panel' style={{ color: 'white' }}>
-          <h1 className='content-panel-title'>Irvine Office</h1>
-          <p>1234 Jamboree Rd.<br />Irvine, CA 92629<br/>{process.env.REACT_APP_FORMATTED_PHONE}</p>
-        </div>
-        <div className='content-grid-panel' style={{ color: 'white' }}>
-        <iframe
-          title='location'
-          height='200'
-          width='80%'
-          style={{border: 0}}
-          loading="lazy"
-          allowFullScreen
-          src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1231.223336734441!2d-117.74745046418971!3d33.664006656972205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcdd5051a15d5b%3A0x60063be56ef12b99!2s157%20Technology%20Dr%2C%20Irvine%2C%20CA%2092618!5e1!3m2!1sen!2sus!4v1629495492294!5m2!1sen!2sus`}>
-        </iframe>
-        </div>
-        <div className='content-grid-panel' style={{ color: 'white' }}>
-          <h1 className='content-panel-title'>Navigate</h1>
-          <ul className='bottom-nav'>
-            <li>Home</li>
-            <li>About</li>
-            <li>Services</li>
-            <li>Contact</li>
-            <li>Location</li>
-          </ul>
-        </div>
-      </div>
+      <BottomBar />
     </div>
   )
 };

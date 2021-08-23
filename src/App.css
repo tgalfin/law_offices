@@ -32,6 +32,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: auto;
+  overflow: hidden;
 }
 
 /* 
@@ -215,15 +216,14 @@ nav ul li:hover {
   height: 100vh;
   overflow-y: auto;
   background-color: #E1E5F2;
-  padding-bottom: 120px !important;
 }
 
-/* .main-content {
-  max-width: 1400px;
-  margin: auto;
-  background-color: rgb(202, 210, 218);
+.main-content {
+
+  z-index: 100;
   overflow-y: auto;
-} */
+  background-color: white;
+}
 
 .carousel-container {
   position: relative;
@@ -443,6 +443,11 @@ nav ul li:hover {
   cursor: pointer;
 }
 
+.bottom-bar {
+  position: relative;
+  bottom: 0;
+  z-index: 0;
+}
 
 
 /*

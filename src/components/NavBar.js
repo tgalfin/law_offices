@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { Icon } from 'semantic-ui-react';
+import { Icon } from 'semantic-ui-react'
+import TopBar from './TopBar'
 import '../App.css'
 
 const NavBar = (props) => {
@@ -8,6 +9,8 @@ const NavBar = (props) => {
 
   const [hideMenu, setHideMenu] = useState(true);
   return (
+    <div>
+      <TopBar />
     <nav className='nav-bar'>
       <div className='menu-name-container'>
         <div className='menu-title-first-line'>LAW OFFICES OF</div>
@@ -23,7 +26,7 @@ const NavBar = (props) => {
       </ul>
       
     </nav>
-
+    </div>
   )
 };
 

@@ -27,7 +27,7 @@ const ContactForm = (props) => {
         <br />
         <label htmlFor='phone'>Message: </label>
         <br /><br />
-        <textarea type='text' name='message' value={values.message} onChange={handleChange} required />
+        <textarea type='text' rows='6' name='message' value={values.message} onChange={handleChange} required />
         <div className='flex-center'>
           <button type='submit'>Submit</button>
         </div>
